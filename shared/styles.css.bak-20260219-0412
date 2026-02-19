@@ -1,0 +1,276 @@
+/* Power Play — splash page styles (draft)
+   Notes:
+   - Dark, high-contrast, performance vibe
+   - Accent = electric lime + violet
+   - Swap fonts/colors to match final brand kit when available
+*/
+
+:root{
+  --bg: #070A0F;
+  --bg2:#0B1020;
+  --card:#0E152B;
+  --card2:#0C1226;
+  --text:#EAF0FF;
+  --muted:#AAB6D6;
+  --stroke:rgba(255,255,255,.10);
+
+  --lime:#B6FF3B;
+  --violet:#8B5CF6;
+  --cyan:#22D3EE;
+
+  --shadow: 0 24px 60px rgba(0,0,0,.55);
+  --radius: 18px;
+  --radius2: 26px;
+
+  --container: 1120px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(900px 400px at 20% -10%, rgba(139,92,246,.28), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(182,255,59,.16), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+}
+
+img{max-width:100%; display:block}
+
+a{color:inherit; text-decoration:none}
+
+.skip{
+  position:absolute; left:-999px; top:auto;
+  width:1px; height:1px; overflow:hidden;
+}
+.skip:focus{
+  left:16px; top:16px; width:auto; height:auto;
+  padding:10px 12px; border-radius:10px;
+  background:var(--card);
+  border:1px solid var(--stroke);
+  z-index:9999;
+}
+
+.container{max-width:var(--container); margin:0 auto; padding:0 18px}
+
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(7,10,15,.65);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.header__inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0}
+
+.brand{display:flex; align-items:center; gap:10px}
+.brand__mark{
+  width:14px; height:14px; border-radius:5px;
+  background: linear-gradient(135deg, var(--lime), var(--violet));
+  box-shadow: 0 0 0 6px rgba(182,255,59,.08), 0 0 40px rgba(139,92,246,.20);
+}
+.brand__text{font-weight:800; letter-spacing:.14em; font-size:12px}
+
+.nav{display:flex; align-items:center; gap:10px}
+.nav__link{
+  font-size:14px; color:var(--muted);
+  padding:10px 10px;
+  border-radius:12px;
+}
+.nav__link:hover{background: rgba(255,255,255,.04); color:var(--text)}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  border-radius:14px;
+  padding:12px 14px;
+  font-weight:700;
+  border:1px solid var(--stroke);
+}
+.btn--primary{
+  background: linear-gradient(135deg, rgba(182,255,59,.95), rgba(34,211,238,.85));
+  color:#07100B;
+  border-color: rgba(182,255,59,.30);
+}
+.btn--primary:hover{filter:brightness(1.02)}
+.btn--ghost{
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+}
+.btn--ghost:hover{background: rgba(255,255,255,.06)}
+.btn--block{width:100%}
+
+.hero{position:relative; padding:56px 0 28px; overflow:hidden}
+.hero__bg{
+  position:absolute; inset:-2px;
+  background:
+    radial-gradient(900px 380px at 20% 0%, rgba(182,255,59,.12), transparent 65%),
+    radial-gradient(700px 340px at 80% 20%, rgba(139,92,246,.18), transparent 65%);
+  pointer-events:none;
+}
+.hero__inner{position:relative; display:grid; grid-template-columns: 1.15fr .85fr; gap:22px; align-items:center}
+
+.eyebrow{margin:0 0 10px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; font-size:12px; color:rgba(234,240,255,.72)}
+.h1{margin:0; font-size:52px; line-height:1.02; letter-spacing:-.02em}
+.subhead{margin:10px 0 12px; color:var(--muted); font-weight:600}
+.lead{margin:0 0 18px; font-size:18px; color:rgba(234,240,255,.86); max-width:48ch}
+.hero__cta{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 14px}
+
+.chips{display:flex; gap:8px; flex-wrap:wrap}
+.chip{
+  font-size:12px;
+  padding:8px 10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  color:rgba(234,240,255,.82);
+}
+.micro{margin:12px 0 0; color:rgba(170,182,214,.9); font-size:12px}
+
+.mediaCard{
+  position:relative;
+  border-radius: var(--radius2);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  background: #050812;
+}
+.mediaCard img{aspect-ratio: 4/5; object-fit:cover}
+.mediaCard__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.55));
+}
+.mediaCard__badge{
+  position:absolute; left:14px; bottom:14px;
+  display:flex; align-items:center; gap:8px;
+  padding:10px 12px;
+  border-radius:999px;
+  background: rgba(7,10,15,.55);
+  border:1px solid rgba(255,255,255,.14);
+  color:rgba(234,240,255,.92);
+  font-weight:700; font-size:12px;
+  backdrop-filter: blur(10px);
+}
+.dot{width:8px; height:8px; border-radius:99px; background: var(--lime); box-shadow: 0 0 18px rgba(182,255,59,.55)}
+
+.section{padding:34px 0}
+.section--alt{background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06)}
+.section__header{margin-bottom:14px}
+.h2{margin:0 0 8px; font-size:26px; letter-spacing:-.01em}
+.h3{margin:0 0 8px; font-size:18px; letter-spacing:-.01em}
+.muted{margin:0; color:var(--muted)}
+
+.grid{display:grid; gap:12px}
+.grid--2{grid-template-columns: repeat(2, minmax(0, 1fr))}
+.grid--3{grid-template-columns: repeat(3, minmax(0, 1fr))}
+.grid--split{grid-template-columns: 1.15fr .85fr}
+.grid--stats{grid-template-columns: repeat(6, minmax(0, 1fr))}
+
+.card{
+  border-radius: var(--radius);
+  background: rgba(14,21,43,.70);
+  border:1px solid rgba(255,255,255,.09);
+  padding:16px;
+}
+
+.stat{padding:14px}
+.stat__label{margin:0 0 8px; color:rgba(170,182,214,.95); font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+.stat__value{margin:0; font-weight:800; font-size:18px}
+
+.feature p{margin:0; color:rgba(234,240,255,.80)}
+
+.prose p{margin:0 0 10px; color:rgba(234,240,255,.86)}
+.quote{
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid rgba(182,255,59,.55);
+  background: rgba(182,255,59,.06);
+  border-radius: 12px;
+  color: rgba(234,240,255,.92);
+  font-weight: 600;
+}
+
+.menuCard{position:sticky; top:86px; align-self:start}
+.menuCard__links{display:flex; flex-direction:column; gap:8px; margin:12px 0 14px}
+.menuLink{
+  padding:10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  color: rgba(234,240,255,.88);
+  font-weight: 650;
+}
+.menuLink:hover{background: rgba(255,255,255,.06)}
+.menuCard__cta{display:flex; flex-direction:column; gap:8px}
+
+.list{margin:10px 0 0; padding-left:18px; color:rgba(234,240,255,.82)}
+.list li{margin:6px 0}
+
+.price{margin:10px 0 0; font-weight:800; font-size:18px; color:rgba(182,255,59,.92)}
+
+.note{margin-top:12px; background: rgba(12,18,38,.70)}
+
+.cta{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:18px;
+  border-radius: 22px;
+  background:
+    radial-gradient(600px 240px at 20% 0%, rgba(182,255,59,.10), transparent 55%),
+    radial-gradient(600px 240px at 80% 20%, rgba(139,92,246,.16), transparent 55%),
+    rgba(14,21,43,.75);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+}
+.cta__actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+
+.footer{padding:26px 0; border-top:1px solid rgba(255,255,255,.06)}
+.footer__inner{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+@media (max-width: 980px){
+  .hero__inner{grid-template-columns: 1fr}
+  .grid--stats{grid-template-columns: repeat(3, minmax(0, 1fr))}
+  .grid--split{grid-template-columns: 1fr}
+  .grid--3{grid-template-columns: 1fr}
+  .grid--2{grid-template-columns: 1fr}
+  .menuCard{position:relative; top:auto}
+  .h1{font-size:42px}
+}
+
+@media (max-width: 480px){
+  .h1{font-size:36px}
+  .nav__link{display:none}
+}
+
+.hero .micro {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* Athlete page hero alignment tweaks (Cody/TJ/Matt) */
+.athlete-page .hero__copy {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.athlete-page .hero .subhead {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.35;
+  font-weight: 700;
+}
+.athlete-page .hero .chips { order: 2; }
+.athlete-page .hero .hero__cta {
+  order: 3;
+  margin-top: auto;
+}
+
+
+/* Cody hero image registration fix */
+.hero-img--cody {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 62% 8%;
+  transform: none;
+}

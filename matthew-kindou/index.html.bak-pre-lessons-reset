@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matthew Kindou — Power Play</title>
+  <meta name="description" content="Matthew Kindou — featured long-drive athlete at Power Play. Lessons, appearances, and sponsorship opportunities." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../shared/styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matthew Kindou — Power Play" />
+  <meta property="og:description" content="Featured athlete at Power Play. Lessons, appearances, and sponsorship opportunities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/hero.jpg" />
+</head>
+<body class="athlete-page">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Power Play">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">POWER PLAY</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#athlete">Athlete</a>
+        <a class="nav__link" href="#menu">Menu</a>
+        <a class="nav__link" href="#event">Event</a>
+        <a class="btn btn--primary" href="#rsvp">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="athlete" class="hero" aria-label="Matthew Kindou">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Featured athlete • Power Play</p>
+          <h1 class="h1">Matthew Kindou</h1>
+          <p class="subhead">Professional Long Drive Athlete</p>
+
+          <p class="lead">Canadian long-drive competitor from Innisfil, Ontario. Kindou rose to prominence when he was ranked Canada’s top amateur long-drive athlete in 2019 and later finished runner-up at the 2022 Canadian National Amateur Long Drive Championship. His personal-best drives include a 435-yard shot and he routinely produces ball speeds around 211 mph with club-head speeds of 146 mph.</p>
+
+          <div class="hero__cta">
+            <a id="rsvp" class="btn btn--primary" href="https://luma.com/i0m71iub?locale=en-CA" target="_blank" rel="noopener">RSVP / Join Power Play</a>
+            <a class="btn btn--ghost" href="#social">Follow on Instagram</a>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">Long-drive demos</span>
+            <span class="chip">Bay coaching</span>
+            <span class="chip">Meet & greet</span>
+          </div>
+</div>
+
+        <div class="hero__media">
+          <div class="mediaCard">
+            <img src="./assets/hero.jpg" alt="Matthew Kindou holding the World Long Drive championship belt" loading="eager" />
+            <div class="mediaCard__overlay" aria-hidden="true"></div>
+            <div class="mediaCard__badge">
+              <span class="dot" aria-hidden="true"></span>
+              Power Play Athlete
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF BAR -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">Credibility, fast</h2>
+          <p class="muted">Quick proof points for sponsors, organizers, and event guests.</p>
+        </div>
+
+        <div class="grid grid--stats" role="list">
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Major highlight</p>
+            <p class="stat__value">Former Canada’s top amateur long-drive athlete (2019)</p>
+          </div>
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Longest drive</p>
+            <p class="stat__value">435 yards</p>
+          </div>
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Tour / league</p>
+            <p class="stat__value">Canadian National Amateur Long Drive</p>
+          </div>
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Notable stat</p>
+            <p class="stat__value">~211 mph ball speed / 146 mph club-head speed</p>
+          </div>
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Appearance type</p>
+            <p class="stat__value">Demos + coaching</p>
+          </div>
+          <div class="card stat" role="listitem">
+            <p class="stat__label">Home base</p>
+            <p class="stat__value">Innisfil, Ontario</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU’LL SEE -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">What you’ll see at Power Play</h2>
+          <p class="muted">A pro golf networking experience with real performance up close.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card feature">
+            <h3 class="h3">Live long-drive demos</h3>
+            <p>See speed and strike on-demand, with quick breakdowns of what matters most.</p>
+          </div>
+          <div class="card feature">
+            <h3 class="h3">Tips in the bays</h3>
+            <p>Simple, repeatable cues you can use right away—without overthinking your swing.</p>
+          </div>
+          <div class="card feature">
+            <h3 class="h3">Photos + meet &amp; greet</h3>
+            <p>Meet Kelly, connect with other guests, and walk away with content and contacts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO + MENU CARD -->
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="grid grid--split">
+          <div>
+            <div class="section__header">
+              <h2 class="h2">About Matthew</h2>
+              <p class="muted">Short, scannable, andiv>
+            <div class="card prose">
+              <p>Canadian long-drive competitor from Innisfil, Ontario. Kindou rose to prominence when he was ranked Canada’s top amateur long-drive athlete in 2019 and later finished runner-up at the 2022 Canadian National Amateur Long Drive Championship. His personal-best drives include a 435-yard shot and he routinely produces ball speeds around 211 mph with club-head speeds of 146 mph.</p>
+              <p>Canadian long-drive competitor from Innisfil, Ontario. Kindou rose to prominence when he was ranked Canada’s top amateur long-drive athlete in 2019 and later finished runner-up at the 2022 Canadian National Amateur Long Drive Championship. His personal-best drives include a 435-yard shot and he routinely produces ball speeds around 211 mph with club-head speeds of 146 mph.</p>
+              <p class="quote">“Slow is fast.”</p>
+            </div>
+          </div>
+
+          <aside class="card menuCard" aria-label="Menu">
+            <h3 class="h3">Menu</h3>
+            <p class="muted">Jump straight to what you need.</p>
+            <div class="menuCard__links">
+              <a class="menuLink" href="#lessons">A. Lessons</a>
+              <a class="menuLink" href="#fees">B. Appearance fees</a>
+              <a class="menuLink" href="#tournaments">C. Tournament appearances</a>
+              <a class="menuLink" href="#sponsorship">D. Sponsorship opportunities</a>
+            </div>
+            <div class="menuCard__cta">
+              <a class="btn btn--primary btn--block" href="#contact">Book / Inquire</a>
+              <a class="btn btn--ghost btn--block" href="#event">Event details</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- LESSONS -->
+    <section id="lessons" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">A. Lessons</h2>
+          <p class="muted">Designed to be bookable for individuals, groups, and corporate sessions.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="h3">1:1 Private</h3>
+            <p class="muted">30 / 60 / 90 minutes</p>
+            <ul class="stats-grid">
+        <li class="stat-card">
+          <p class="stat-card__label">MAJOR HIGHLIGHT</p>
+          <p class="stat-card__value">Former Canada’s top amateur long-drive athlete (2019)</p>
+        </li>
+        <li class="stat-card">
+          <p class="stat-card__label">LONGEST DRIVE</p>
+          <p class="stat-card__value">435 yards</p>
+        </li>
+        <li class="stat-card">
+          <p class="stat-card__label">TOUR / LEAGUE</p>
+          <p class="stat-card__value">Canadian National Amateur Long Drive</p>
+        </li>
+        <li class="stat-card">
+          <p class="stat-card__label">NOTABLE STAT</p>
+          <p class="stat-card__value">~211 mph ball speed / 146 mph club-head speed</p>
+        </li>
+        <li class="stat-card">
+          <p class="stat-card__label">APPEARANCE TYPE</p>
+          <p class="stat-card__value">Demos + coaching</p>
+        </li>
+        <li class="stat-card">
+          <p class="stat-card__label">HOME BASE</p>
+          <p class="stat-card__value">Innisfil, Ontario</p>
+        </li>
+      </ul>
+          </div>
+          <div class="card">
+            <h3 class="h3">Small group</h3>
+            <p class="muted">2–6 people</p>
+            <ul class="list">
+              <li>Fun, competitive format</li>
+              <li>Speed + strike stations</li>
+              <li>Everyone leaves with cues</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="h3">Speed session</h3>
+            <p class="muted">Long-drive fundamentals</p>
+            <ul class="list">
+              <li>Safe speed-building</li>
+              <li>Launch/spin basics</li>
+              <li>Progress plan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEES -->
+    <section id="fees" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">B. Appearance fees</h2>
+          <p class="muted">We can publish “starting at” pricing, or keep it inquiry-only.</p>
+        </div>
+
+        <div class="grid grid--split">
+          <div class="card">
+            <h3 class="h3">Typical appearances</h3>
+            <ul class="list">
+              <li>Brand / sponsor event</li>
+              <li>Corporate networking night</li>
+              <li>Golf club member event</li>
+              <li>Media / content day</li>
+              <li>Product launch</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="h3">What’s included (example)</h3>
+            <ul class="list">
+              <li>On-site time block (60–120 mins)</li>
+              <li>Meet &amp; greet + photos</li>
+              <li>Short demo (space permitting)</li>
+              <li>Optional social post add-on</li>
+            </ul>
+            <p class="muted">Fee guidance: <strong>TBD</strong> (or “Inquire”)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOURNAMENTS -->
+    <section id="tournaments" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">C. Tournament appearances</h2>
+          <p class="muted">For organizers: bring a long-drive moment into your event.</p>
+        </div>
+
+        <div class="grid grid--split">
+          <div class="card">
+            <h3 class="h3">Options</h3>
+            <ul class="list">
+              <li>Long-drive exhibition</li>
+              <li>Featured athlete / guest competitor</li>
+              <li>On-course activation + sponsor content</li>
+              <li>Skills challenge add-ons</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="h3">Organizer requirements (draft)</h3>
+            <ul class="list">
+              <li>Safe hitting area + netting (if needed)</li>
+              <li>PA / mic recommended</li>
+              <li>Run-of-show time slot</li>
+              <li>Launch monitor optional</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORSHIP -->
+    <section id="sponsorship" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">D. Sponsorship opportunities</h2>
+          <p class="muted">Published placeholder rate card (CAD). Clean “starting at” numbers that scale with term, exclusivity, deliverables, and usage rights.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="h3">Cap / hat</h3>
+            <p class="muted">Logo placement (monthly)</p>
+            <ul class="list">
+              <li><strong>Side placement:</strong> $750/mo</li>
+              <li><strong>Front placement:</strong> $1,500/mo</li>
+              <li><strong>Category exclusive add-on:</strong> +25–50%</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Shirt / apparel</h3>
+            <p class="muted">Logo placement (monthly)</p>
+            <ul class="list">
+              <li><strong>Sleeve / chest / back:</strong> $1,250/mo</li>
+              <li><strong>Primary apparel position:</strong> $2,500/mo</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Bag</h3>
+            <p class="muted">Logo / patch placement (monthly)</p>
+            <ul class="list">
+              <li><strong>Standard placement:</strong> $600/mo</li>
+              <li><strong>Premium placement:</strong> $1,200/mo</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Social content</h3>
+            <p class="muted">Delivered on Kelly’s channels</p>
+            <ul class="list">
+              <li><strong>Story pack (3–5 frames):</strong> $400</li>
+              <li><strong>1 Reel:</strong> $1,500</li>
+              <li><strong>1 Reel + Story pack:</strong> $1,900</li>
+              <li><strong>Monthly retainer (2 Reels + 2 Story packs):</strong> $3,500</li>
+            </ul>
+            <p class="muted" style="margin-top:10px">Paid usage / whitelisting available as an add-on.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Event / demo sponsor</h3>
+            <p class="muted">Per event (signage + mentions)</p>
+            <ul class="list">
+              <li><strong>On-site demo sponsor:</strong> $3,500 / event (signage + 2 mentions)</li>
+              <li><strong>Presenting demo sponsor:</strong> $7,500 / event (premium signage + 4 mentions + category exclusive)</li>
+              <li><strong>Title sponsor (athlete segment):</strong> $12,500 / event (full integration)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Training / equipment partner</h3>
+            <p class="muted">Category partner (monthly)</p>
+            <ul class="list">
+              <li><strong>In-kind only:</strong> case-by-case</li>
+              <li><strong>In-kind + cash support:</strong> $750/mo (starter) → $2,000/mo (category partner)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card note">
+          <h3 class="h3">Terms + add-ons</h3>
+          <div class="grid grid--split">
+            <ul class="list">
+              <li>Content day (half/full)</li>
+              <li>Photo/video licensing</li>
+              <li>Paid usage / whitelisting</li>
+            </ul>
+            <ul class="list">
+              <li>Travel (outside local area)</li>
+              <li>Category exclusivity (where stated)</li>
+              <li>Deliverables & dates finalized in writing</li>
+            </ul>
+          </div>
+          <p class="muted" style="margin-top:12px">Rates shown are starting points and vary with term, exclusivity, deliverables, and usage rights.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA / HIGHLIGHTS -->
+    <section class="section section--alt" aria-label="Media highlights">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">Highlights</h2>
+          <p class="muted">Hand-picked from Instagram (post + reels). Embeds may require cookies; links always work.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="h3">World Champion post</h3>
+            <p class="muted">Official post featuring Matthew.</p>
+            <a class="btn btn--ghost" href="https://www.instagram.com/kindou_ld/reel/DULf40rjWDU/" target="_blank" rel="noopener">Open post</a>
+          </div>
+          <div class="card">
+            <h3 class="h3">Reel (video)</h3>
+            <p class="muted">Behind-the-scenes / moment clip.</p>
+            <a class="btn btn--ghost" href="https://www.instagram.com/kindou_ld/p/DI-FSJkNGEW/" target="_blank" rel="noopener">Watch reel</a>
+          </div>
+          <div class="card">
+            <h3 class="h3">Reel (video)</h3>
+            <p class="muted">Championship recap reel from Matthew.</p>
+            <a class="btn btn--ghost" href="https://www.instagram.com/kindou_ld/p/DUX2Np9jHDn/" target="_blank" rel="noopener">Watch reel</a>
+          </div>
+        </div>
+
+        <div class="card note" style="margin-top:12px">
+          <h3 class="h3">Embedded media (optional)</h3>
+          <div class="grid grid--2" style="margin-top:10px">
+            <div class="card" style="background:rgba(255,255,255,.02)">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kindou_ld/reel/DULf40rjWDU/" data-instgrm-version="14" style="margin:0; width:100%"></blockquote>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,.02)">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kindou_ld/p/DI-FSJkNGEW/" data-instgrm-version="14" style="margin:0; width:100%"></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL / CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2">Contact</h2>
+        </div>
+
+        <div id="social" class="grid grid--split">
+          <div class="card">
+            <h3 class="h3">Instagram</h3>
+            <p class="muted">@kindou_ld</p>
+            <a class="btn btn--ghost" href="https://www.instagram.com/kindou_ld/" target="_blank" rel="noopener">Open Instagram</a>
+          </div>
+          <div class="card">
+            <h3 class="h3">Booking / inquiries</h3>
+            <p class="muted">We can route inquiries through Power Play (recommended) or use Kelly’s preferred contact.</p>
+            <a class="btn btn--primary" href="mailto:info@powerplay.golf?subject=Booking%20Inquiry%20%E2%80%94%20Matthew%20Kindou">Email to inquire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT CTA -->
+    <section id="event" class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <p class="eyebrow">Power Play</p>
+            <h2 class="h2">Pro Golf Networking Experience</h2>
+            <p class="muted">Event details and RSVP live on Luma.</p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="https://luma.com/i0m71iub?locale=en-CA" target="_blank" rel="noopener">RSVP</a>
+            <a class="btn btn--ghost" href="#athlete">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span id="y"></span> Power Play. All rights reserved.</p>
+      <p class="muted">Built as an event splash page — fast, mobile-first, sponsor-friendly.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Instagram embed (optional) -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
