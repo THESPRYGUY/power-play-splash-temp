@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parent Transparency Around Outside Speakers | Allan A. Greenleaf Families</title>
+  <meta name="description" content="A constructive parent-led request for a clear external speaker and sensitive programming transparency protocol at Allan A. Greenleaf." />
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5a6578;
+      --line: #d9dfeb;
+      --bg: #f6f8fc;
+      --card: #ffffff;
+      --blue: #155fa3;
+      --blue-dark: #0f477b;
+      --gold: #f4c542;
+      --soft-blue: #eaf3fb;
+      --soft-gold: #fff7d8;
+      --danger-soft: #fff0ec;
+      --radius: 18px;
+      --shadow: 0 16px 40px rgba(23, 32, 51, 0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    a { color: var(--blue); }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header {
+      background: linear-gradient(135deg, #0f477b 0%, #155fa3 58%, #1f7cc4 100%);
+      color: white;
+      padding: 64px 0 52px;
+    }
+    .nav { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin-bottom: 46px; }
+    .brand { font-weight: 800; letter-spacing: .02em; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.02; margin: 0 0 20px; max-width: 900px; }
+    .lead { font-size: clamp(18px, 2.2vw, 24px); max-width: 880px; color: rgba(255,255,255,.92); margin: 0 0 28px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 750;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary { background: white; color: var(--blue-dark); }
+    .btn-secondary { background: transparent; color: white; border-color: rgba(255,255,255,.55); }
+    main { padding: 34px 0 80px; }
+    section { margin: 28px 0; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .span-8 { grid-column: span 8; }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-12 { grid-column: span 12; }
+    h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.15; margin: 0 0 16px; }
+    h3 { font-size: 22px; margin: 0 0 10px; }
+    p { margin: 0 0 14px; }
+    ul { margin: 12px 0 0 20px; padding: 0; }
+    li { margin: 7px 0; }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 750;
+      margin-bottom: 12px;
+    }
+    .notice { background: var(--soft-gold); border-color: #f2df91; }
+    .privacy { background: #f8fbff; }
+    .quote {
+      border-left: 5px solid var(--blue);
+      padding-left: 18px;
+      font-size: 18px;
+      font-weight: 650;
+      color: #24304a;
+      margin: 16px 0;
+    }
+    .motion {
+      background: #f9fbff;
+      border: 1px dashed #93b7db;
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: block; font-weight: 700; margin: 14px 0 6px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #c9d2e3;
+      border-radius: 10px;
+      font: inherit;
+      background: white;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .checks label { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; margin: 12px 0; }
+    .checks input { width: auto; margin-top: 4px; }
+    .small { font-size: 13px; color: var(--muted); }
+    .divider { height: 1px; background: var(--line); margin: 22px 0; }
+    footer { padding: 36px 0; color: var(--muted); border-top: 1px solid var(--line); }
+    .success {
+      display: none;
+      background: #eaf8ef;
+      border: 1px solid #b8e1c4;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 14px;
+    }
+    @media (max-width: 840px) {
+      .grid { grid-template-columns: 1fr; }
+      .span-8, .span-4, .span-6, .span-12 { grid-column: span 1; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">Allan A. Greenleaf Families · Draft discussion page</div>
+        <a class="pill" href="#motion">Proposed School Council Motion</a>
+      </div>
+      <h1>Parent Transparency Around Outside Speakers</h1>
+      <p class="lead">A constructive parent-led request for clearer notice, age-appropriate review, and a written process when outside speakers or third-party presenters are brought into the school.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#sign">Add your name to the submission</a>
+        <a class="btn btn-secondary" href="#attend">Attend the council meeting</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <div class="card span-8">
+        <span class="tag">Why this matters</span>
+        <h2>This is about process, trust, and age-appropriate transparency.</h2>
+        <p>Outside speakers can add real value to student learning. Many families support thoughtful programming on important topics. The concern is not whether schools should ever discuss difficult subjects. The concern is whether parents are properly informed before sensitive content is presented to children, and whether there is a clear process for questions, review, and alternative arrangements where appropriate.</p>
+        <p>Some families have experienced presentations that left children confused or distressed. Other families may simply want advance notice, the speaker’s name, the organization, the topic, the materials, and how the presentation connects to curriculum or school goals.</p>
+        <div class="quote">Parents should not be finding out after the fact that outside presenters discussed sensitive topics with young children.</div>
+        <p>This request is not anti-school, anti-teacher, or anti-any-topic. It is a practical request for transparency and good governance.</p>
+      </div>
+
+      <aside class="card span-4 notice" id="attend">
+        <span class="tag">Meeting information</span>
+        <h3>Come to School Council</h3>
+        <p><strong>Proposed discussion:</strong> External speaker and sensitive programming transparency protocol.</p>
+        <p><strong>Next listed meeting:</strong><br />Thursday, May 21, 2026<br />In person — School Library</p>
+        <p class="small">Please confirm the latest meeting date, time, location, and agenda on the official Allan A. Greenleaf School Council page before attending.</p>
+        <a class="btn" style="background:#155fa3;color:white;margin-top:8px;" href="https://allanagreenleaf.hwdsb.on.ca/school-council-allanagreenleaf" target="_blank" rel="noopener">Check official council page</a>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div class="card span-6">
+        <span class="tag">Parent awareness</span>
+        <h2>What families should know in advance</h2>
+        <p>We are asking for a simple, consistent notice process when external speakers, guest facilitators, performers, or third-party organizations present to students.</p>
+        <ul>
+          <li>speaker name and organization;</li>
+          <li>topic, focus, and learning objectives;</li>
+          <li>curriculum connection or school purpose;</li>
+          <li>grade level and age-appropriateness review;</li>
+          <li>slides, videos, handouts, books, giveaways, or other materials;</li>
+          <li>whether sensitive topics will be discussed;</li>
+          <li>who reviewed and approved the content;</li>
+          <li>how parents can ask questions in advance;</li>
+          <li>how parents can request an alternative activity where appropriate.</li>
+        </ul>
+      </div>
+
+      <div class="card span-6">
+        <span class="tag">School council role</span>
+        <h2>Why this belongs at School Council</h2>
+        <p>School council does not manage the school, direct teachers, or approve curriculum. But school council is a parent-facing advisory and accountability forum. It exists so parents and members of the school community can contribute to student success, ask reasonable questions, and make recommendations to the principal and the board.</p>
+        <p>That makes school council the right place to discuss a school-wide process: advance notice, parent awareness, age-appropriateness, materials review, alternative activity options, and post-session feedback.</p>
+      </div>
+    </section>
+
+    <section class="card span-12" id="motion">
+      <span class="tag">Proposed motion</span>
+      <h2>Motion to present to School Council</h2>
+      <p>The goal is to ask council to make a recommendation, not to accuse anyone or debate individual incidents.</p>
+      <div class="motion">
+        <p><strong>Proposed Motion:</strong></p>
+        <p>That School Council request the principal to provide the school’s current process for approving external speakers, guest presenters, performances, and sensitive-topic presentations; and that School Council recommend the creation of a written parent notification and transparency protocol for outside speakers, including advance notice, speaker details, topic, purpose, curriculum connection, materials, age-appropriateness review, sensitive-topic safeguards, and an opt-out or alternative activity process where appropriate.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card span-8">
+        <span class="tag">The open letter</span>
+        <h2>Open letter to AAG families</h2>
+        <p>Hi everyone,</p>
+        <p>I wanted to share a respectful parent concern that I think deserves a broader conversation among Allan A. Greenleaf families.</p>
+        <p>When outside speakers, facilitators, or third-party organizations are brought into the school to speak with our children, parents should know about it in advance, understand what will be discussed, and have a clear process for asking questions or requesting an alternative activity where appropriate.</p>
+        <p>Our family has had experiences where outside presentations left us concerned about age-appropriateness and process. After trust was damaged, we advised the school that we wanted our child opted out of external speakers unless we had advance notice and could review the details. From what we understand, a similar speaker may later have been brought back, and it appears our request may not have been properly followed.</p>
+        <p>I am not raising this to accuse anyone of bad faith. I am raising it because these situations should not depend on informal memory, hallway conversations, or parents finding out afterward. They should be handled through a clear, written, transparent process.</p>
+        <p>This is why I believe School Council should ask for a simple external speaker and sensitive programming transparency protocol.</p>
+        <p>The goal is clarity, not conflict. Transparency protects students, supports staff, and rebuilds parent trust.</p>
+      </div>
+
+      <div class="card span-4 privacy">
+        <span class="tag">Privacy-first sign-on</span>
+        <h3>How names should be handled</h3>
+        <ul>
+          <li>Collect only what is needed.</li>
+          <li>Do not collect child names, grades, or classroom details.</li>
+          <li>Email should be optional unless needed for verification.</li>
+          <li>Families should choose whether their name is public or private.</li>
+          <li>Use information only for this submission and meeting updates.</li>
+          <li>Allow families to withdraw their name.</li>
+          <li>Delete the list after the motion is presented, unless consent is renewed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="sign">
+      <span class="tag">Draft sign-on form</span>
+      <h2>Add your name to the submission</h2>
+      <p>This draft form is for planning only. It does not send or store information. Before using a live form, the privacy wording, storage location, access permissions, and deletion plan should be finalized.</p>
+      <form id="mockForm">
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="First and last name" />
+          </div>
+          <div>
+            <label for="email">Email <span class="small">(optional, for verification/updates)</span></label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+          </div>
+        </div>
+        <label for="publicName">How may your name be used?</label>
+        <select id="publicName" name="publicName">
+          <option value="private">Count me privately; do not publish my name</option>
+          <option value="public">You may include my name publicly on the submission</option>
+        </select>
+        <label for="comment">Optional comment <span class="small">(do not include child names or private student information)</span></label>
+        <textarea id="comment" name="comment" placeholder="Optional: why parent transparency matters to your family"></textarea>
+        <div class="checks">
+          <label><input type="checkbox" /> I am a parent, guardian, caregiver, or family member connected to Allan A. Greenleaf.</label>
+          <label><input type="checkbox" /> I support asking School Council to recommend a written external speaker and sensitive programming transparency protocol.</label>
+          <label><input type="checkbox" /> I understand my information should be used only for this submission and related meeting updates, and that I can ask to withdraw my name.</label>
+        </div>
+        <button class="btn" style="background:#155fa3;color:white;margin-top:12px;" type="submit">Add my name</button>
+        <div id="success" class="success">Draft only: no information was submitted. In a live version, this would send to a secure form/database after the privacy setup is finalized.</div>
+      </form>
+    </section>
+
+    <section class="grid">
+      <div class="card span-6">
+        <span class="tag">Source links</span>
+        <h2>Useful references</h2>
+        <ul>
+          <li><a href="https://www.ontario.ca/page/your-childs-education-parent-guide-our-school-system" target="_blank" rel="noopener">Ontario parent guide — guest speakers in schools</a></li>
+          <li><a href="https://www.ontario.ca/laws/regulation/000612" target="_blank" rel="noopener">Ontario Regulation 612/00 — School Councils and Parent Involvement Committees</a></li>
+          <li><a href="https://allanagreenleaf.hwdsb.on.ca/school-council-allanagreenleaf" target="_blank" rel="noopener">Allan A. Greenleaf School Council page</a></li>
+          <li><a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/p_principle/" target="_blank" rel="noopener">Office of the Privacy Commissioner — fair information principles</a></li>
+        </ul>
+      </div>
+      <div class="card span-6">
+        <span class="tag">Tone commitment</span>
+        <h2>Constructive engagement</h2>
+        <p>This effort is intended to be respectful and process-focused. It is not about targeting staff, naming individual presenters, or turning a school issue into a political fight.</p>
+        <p>Families can support important learning while also asking that sensitive material be handled with clear parent communication, age-appropriate review, and consistent accountability.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Draft page only.</strong> This page is a planning prototype and is not affiliated with Allan A. Greenleaf Elementary School or HWDSB. Confirm all meeting information with the official school council page before publishing.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mockForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('success').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
