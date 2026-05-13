@@ -328,9 +328,7 @@
   </footer>
 
   <script>
-    // Paste your deployed Google Apps Script Web App URL below.
-    // It should look like: https://script.google.com/macros/s/AKfycb.../exec
-    const FORM_ENDPOINT = "";
+    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzB9pmUh7NLfCOL6CK9qFL_qUhe9xGQq5IQOSPWpOulkew3jyr1qW9qkGLSMHSHagZu1w/exec";
 
     const form = document.getElementById('signonForm');
     const submitButton = document.getElementById('submitButton');
@@ -360,11 +358,6 @@
 
       if (!payload.name || !payload.email || !payload.aagConnectionConfirmed || !payload.supportsMotion || !payload.consentConfirmed) {
         showMessage(errorMessage, 'Please complete the required fields and checkboxes before submitting.');
-        return;
-      }
-
-      if (!FORM_ENDPOINT) {
-        showMessage(errorMessage, 'The sign-on form is ready but not connected to the private response sheet yet. Please check back soon or contact Glen directly.');
         return;
       }
 
