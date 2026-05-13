@@ -130,7 +130,6 @@
     .checks label { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; margin: 12px 0; }
     .checks input { width: auto; margin-top: 4px; }
     .small { font-size: 13px; color: var(--muted); }
-    .divider { height: 1px; background: var(--line); margin: 22px 0; }
     footer { padding: 36px 0; color: var(--muted); border-top: 1px solid var(--line); }
     .message {
       display: none;
@@ -192,7 +191,6 @@
         <div class="quote">Parents should not be finding out after the fact that outside presenters discussed sensitive topics with young children.</div>
         <p>This request is not anti-school, anti-teacher, or anti-any-topic. It is a practical request for transparency and good governance.</p>
       </div>
-
       <aside class="card span-4 notice" id="attend">
         <span class="tag">Meeting information</span>
         <h3>Come to School Council</h3>
@@ -220,7 +218,6 @@
           <li>how parents can request an alternative activity where appropriate.</li>
         </ul>
       </div>
-
       <div class="card span-6">
         <span class="tag">School council role</span>
         <h2>Why this belongs at School Council</h2>
@@ -251,7 +248,6 @@
         <p>This is why I believe School Council should ask for a simple external speaker and sensitive programming transparency protocol.</p>
         <p>The goal is clarity, not conflict. Transparency protects students, supports staff, and rebuilds parent trust.</p>
       </div>
-
       <div class="card span-4 privacy">
         <span class="tag">Privacy-first sign-on</span>
         <h3>How names are handled</h3>
@@ -297,7 +293,7 @@
         </div>
         <button id="submitButton" class="btn btn-form" type="submit">Add my name</button>
         <div id="success" class="message message--success">Thank you — your sign-on has been submitted. Your email will not be published, and your name will only be used publicly if you gave permission.</div>
-        <div id="error" class="message message--error">The sign-on form is not fully connected yet. Please try again later or contact Glen directly.</div>
+        <div id="error" class="message message--error">Something went wrong while submitting. Please try again later or contact Glen directly.</div>
       </form>
     </section>
 
@@ -328,7 +324,7 @@
   </footer>
 
   <script>
-    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzB9pmUh7NLfCOL6CK9qFL_qUhe9xGQq5IQOSPWpOulkew3jyr1qW9qkGLSMHSHagZu1w/exec";
+    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyS_RhqQDFllOZxpRZUqePm_Ho6S3le5wrpHfv3KO-Cv9XHYFWvPZo92YH-5Ls0x2P9Ew/exec";
 
     const form = document.getElementById('signonForm');
     const submitButton = document.getElementById('submitButton');
