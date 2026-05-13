@@ -18,7 +18,10 @@
       --gold: #f4c542;
       --soft-blue: #eaf3fb;
       --soft-gold: #fff7d8;
-      --danger-soft: #fff0ec;
+      --success: #eaf8ef;
+      --success-border: #b8e1c4;
+      --error: #fff0ec;
+      --error-border: #efb5a5;
       --radius: 18px;
       --shadow: 0 16px 40px rgba(23, 32, 51, 0.10);
     }
@@ -66,6 +69,8 @@
     }
     .btn-primary { background: white; color: var(--blue-dark); }
     .btn-secondary { background: transparent; color: white; border-color: rgba(255,255,255,.55); }
+    .btn-form { background: var(--blue); color: white; margin-top: 12px; }
+    .btn[disabled] { opacity: .55; cursor: not-allowed; }
     main { padding: 34px 0 80px; }
     section { margin: 28px 0; }
     .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
@@ -127,18 +132,32 @@
     .small { font-size: 13px; color: var(--muted); }
     .divider { height: 1px; background: var(--line); margin: 22px 0; }
     footer { padding: 36px 0; color: var(--muted); border-top: 1px solid var(--line); }
-    .success {
+    .message {
       display: none;
-      background: #eaf8ef;
-      border: 1px solid #b8e1c4;
       padding: 14px;
       border-radius: 12px;
       margin-top: 14px;
     }
+    .message--success { background: var(--success); border: 1px solid var(--success-border); }
+    .message--error { background: var(--error); border: 1px solid var(--error-border); }
+    .support-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .support-stat {
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .support-stat strong { display: block; font-size: 32px; line-height: 1; }
+    .support-stat span { display: block; color: rgba(255,255,255,.86); margin-top: 7px; }
     @media (max-width: 840px) {
       .grid { grid-template-columns: 1fr; }
       .span-8, .span-4, .span-6, .span-12 { grid-column: span 1; }
-      .form-row { grid-template-columns: 1fr; }
+      .form-row, .support-box { grid-template-columns: 1fr; }
       .nav { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -147,7 +166,7 @@
   <header>
     <div class="wrap">
       <div class="nav">
-        <div class="brand">Allan A. Greenleaf Families · Draft discussion page</div>
+        <div class="brand">Allan A. Greenleaf Families · Parent sign-on page</div>
         <a class="pill" href="#motion">Proposed School Council Motion</a>
       </div>
       <h1>Parent Transparency Around Outside Speakers</h1>
@@ -155,6 +174,10 @@
       <div class="cta-row">
         <a class="btn btn-primary" href="#sign">Add your name to the submission</a>
         <a class="btn btn-secondary" href="#attend">Attend the council meeting</a>
+      </div>
+      <div class="support-box" aria-label="Community support summary">
+        <div class="support-stat"><strong>20+</strong><span>Parents consulted informally</span></div>
+        <div class="support-stat"><strong id="formalCount">Open</strong><span>Formal sign-ons now being collected</span></div>
       </div>
     </div>
   </header>
@@ -231,48 +254,50 @@
 
       <div class="card span-4 privacy">
         <span class="tag">Privacy-first sign-on</span>
-        <h3>How names should be handled</h3>
+        <h3>How names are handled</h3>
         <ul>
           <li>Collect only what is needed.</li>
           <li>Do not collect child names, grades, or classroom details.</li>
-          <li>Email should be optional unless needed for verification.</li>
-          <li>Families should choose whether their name is public or private.</li>
-          <li>Use information only for this submission and meeting updates.</li>
+          <li>Email is used only for verification or meeting updates.</li>
+          <li>Families choose whether their name is public or private.</li>
+          <li>Use information only for this submission and related updates.</li>
           <li>Allow families to withdraw their name.</li>
-          <li>Delete the list after the motion is presented, unless consent is renewed.</li>
+          <li>Delete or archive the list after the motion is presented, unless consent is renewed.</li>
         </ul>
       </div>
     </section>
 
     <section class="card" id="sign">
-      <span class="tag">Draft sign-on form</span>
+      <span class="tag">Sign-on form</span>
       <h2>Add your name to the submission</h2>
-      <p>This draft form is for planning only. It does not send or store information. Before using a live form, the privacy wording, storage location, access permissions, and deletion plan should be finalized.</p>
-      <form id="mockForm">
+      <p>This sign-on form is being used only for the parent submission regarding external speaker and sensitive programming transparency at Allan A. Greenleaf. Please do not include child names, grades, classroom details, staff names, or private student information. Your email will not be published. Your name will only be used publicly if you give permission. You may request removal before the submission is presented.</p>
+      <form id="signonForm">
         <div class="form-row">
           <div>
             <label for="name">Name</label>
-            <input id="name" name="name" placeholder="First and last name" />
+            <input id="name" name="name" placeholder="First and last name" required />
           </div>
           <div>
-            <label for="email">Email <span class="small">(optional, for verification/updates)</span></label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" />
+            <label for="email">Email <span class="small">(for verification/updates; not published)</span></label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
           </div>
         </div>
         <label for="publicName">How may your name be used?</label>
-        <select id="publicName" name="publicName">
+        <select id="publicName" name="publicName" required>
           <option value="private">Count me privately; do not publish my name</option>
           <option value="public">You may include my name publicly on the submission</option>
+          <option value="contact-first">Please contact me before using my name publicly</option>
         </select>
         <label for="comment">Optional comment <span class="small">(do not include child names or private student information)</span></label>
         <textarea id="comment" name="comment" placeholder="Optional: why parent transparency matters to your family"></textarea>
         <div class="checks">
-          <label><input type="checkbox" /> I am a parent, guardian, caregiver, or family member connected to Allan A. Greenleaf.</label>
-          <label><input type="checkbox" /> I support asking School Council to recommend a written external speaker and sensitive programming transparency protocol.</label>
-          <label><input type="checkbox" /> I understand my information should be used only for this submission and related meeting updates, and that I can ask to withdraw my name.</label>
+          <label><input id="aagConnection" type="checkbox" required /> I am a parent, guardian, caregiver, or family member connected to Allan A. Greenleaf.</label>
+          <label><input id="supportsMotion" type="checkbox" required /> I support asking School Council to recommend a written external speaker and sensitive programming transparency protocol.</label>
+          <label><input id="consentConfirmed" type="checkbox" required /> I understand my information should be used only for this submission and related meeting updates, and that I can ask to withdraw my name.</label>
         </div>
-        <button class="btn" style="background:#155fa3;color:white;margin-top:12px;" type="submit">Add my name</button>
-        <div id="success" class="success">Draft only: no information was submitted. In a live version, this would send to a secure form/database after the privacy setup is finalized.</div>
+        <button id="submitButton" class="btn btn-form" type="submit">Add my name</button>
+        <div id="success" class="message message--success">Thank you — your sign-on has been submitted. Your email will not be published, and your name will only be used publicly if you gave permission.</div>
+        <div id="error" class="message message--error">The sign-on form is not fully connected yet. Please try again later or contact Glen directly.</div>
       </form>
     </section>
 
@@ -298,14 +323,70 @@
 
   <footer>
     <div class="wrap">
-      <p><strong>Draft page only.</strong> This page is a planning prototype and is not affiliated with Allan A. Greenleaf Elementary School or HWDSB. Confirm all meeting information with the official school council page before publishing.</p>
+      <p><strong>Parent-led page.</strong> This page is not affiliated with Allan A. Greenleaf Elementary School or HWDSB. Confirm all meeting information with the official school council page before attending.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('mockForm').addEventListener('submit', function(event) {
+    // Paste your deployed Google Apps Script Web App URL below.
+    // It should look like: https://script.google.com/macros/s/AKfycb.../exec
+    const FORM_ENDPOINT = "";
+
+    const form = document.getElementById('signonForm');
+    const submitButton = document.getElementById('submitButton');
+    const successMessage = document.getElementById('success');
+    const errorMessage = document.getElementById('error');
+
+    function showMessage(element, text) {
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      if (text) element.textContent = text;
+      element.style.display = 'block';
+    }
+
+    form.addEventListener('submit', async function(event) {
       event.preventDefault();
-      document.getElementById('success').style.display = 'block';
+
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        publicName: document.getElementById('publicName').value,
+        comment: document.getElementById('comment').value.trim(),
+        aagConnectionConfirmed: document.getElementById('aagConnection').checked,
+        supportsMotion: document.getElementById('supportsMotion').checked,
+        consentConfirmed: document.getElementById('consentConfirmed').checked,
+        sourcePage: window.location.href
+      };
+
+      if (!payload.name || !payload.email || !payload.aagConnectionConfirmed || !payload.supportsMotion || !payload.consentConfirmed) {
+        showMessage(errorMessage, 'Please complete the required fields and checkboxes before submitting.');
+        return;
+      }
+
+      if (!FORM_ENDPOINT) {
+        showMessage(errorMessage, 'The sign-on form is ready but not connected to the private response sheet yet. Please check back soon or contact Glen directly.');
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        form.reset();
+        showMessage(successMessage, 'Thank you — your sign-on has been submitted. Your email will not be published, and your name will only be used publicly if you gave permission.');
+      } catch (err) {
+        showMessage(errorMessage, 'Something went wrong while submitting. Please try again later or contact Glen directly.');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Add my name';
+      }
     });
   </script>
 </body>
